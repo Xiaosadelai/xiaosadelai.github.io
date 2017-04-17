@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://teleporter.top/"/>
-  <updated>2017-04-16T15:22:02.655Z</updated>
+  <updated>2017-04-17T00:26:25.311Z</updated>
   <id>https://teleporter.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://teleporter.top/2017/04/16/%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://teleporter.top/2017/04/16/使用Hexo-Github搭建个人博客/</id>
     <published>2017-04-16T13:41:59.000Z</published>
-    <updated>2017-04-16T15:22:02.655Z</updated>
+    <updated>2017-04-17T00:26:25.311Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;&emsp;Hexo是一个简单、快速、强大的基于 Github Pages的博客发布工具，支持Markdown格式，有众多优秀插件和主题。<br><a id="more"></a></p>
 <h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="indigo主题无法从github上Clone下来"><a href="#indigo主题无法从github上Clone下来" class="headerlink" title="indigo主题无法从github上Clone下来"></a>indigo主题无法从github上Clone下来</h3><p>&emsp;&emsp;SSH key没有在GitHub上正确配置，配置完后测试是否成功</p>
@@ -36,7 +36,7 @@
     
     <summary type="html">
     
-      总结一下搭建个人博客所遇到的问题。
+      &lt;p&gt;&amp;emsp;&amp;emsp;Hexo是一个简单、快速、强大的基于 Github Pages的博客发布工具，支持Markdown格式，有众多优秀插件和主题。&lt;br&gt;
     
     </summary>
     
