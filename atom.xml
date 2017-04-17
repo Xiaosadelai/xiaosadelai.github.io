@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://teleporter.top/"/>
-  <updated>2017-04-15T13:07:18.199Z</updated>
+  <updated>2017-04-16T15:22:02.655Z</updated>
   <id>https://teleporter.top/</id>
   
   <author>
@@ -16,43 +16,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hello world2</title>
-    <link href="https://teleporter.top/2017/04/15/hello-world2/"/>
-    <id>https://teleporter.top/2017/04/15/hello-world2/</id>
-    <published>2017-04-15T13:07:18.000Z</published>
-    <updated>2017-04-15T13:07:18.199Z</updated>
+    <title>使用Hexo+Github搭建个人博客</title>
+    <link href="https://teleporter.top/2017/04/16/%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://teleporter.top/2017/04/16/使用Hexo-Github搭建个人博客/</id>
+    <published>2017-04-16T13:41:59.000Z</published>
+    <updated>2017-04-16T15:22:02.655Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;Hexo是一个简单、快速、强大的基于 Github Pages的博客发布工具，支持Markdown格式，有众多优秀插件和主题。<br><a id="more"></a></p>
+<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="indigo主题无法从github上Clone下来"><a href="#indigo主题无法从github上Clone下来" class="headerlink" title="indigo主题无法从github上Clone下来"></a>indigo主题无法从github上Clone下来</h3><p>&emsp;&emsp;SSH key没有在GitHub上正确配置，配置完后测试是否成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@git@github.com</div></pre></td></tr></table></figure>
+<h3 id="域名解析，无法访问到github"><a href="#域名解析，无法访问到github" class="headerlink" title="域名解析，无法访问到github"></a>域名解析，无法访问到github</h3><p>&emsp;&emsp;需要在GitHub中添加CNAME文件，如图。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/cname.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>]]></content>
     
     <summary type="html">
     
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://teleporter.top/2017/04/15/hello-world/"/>
-    <id>https://teleporter.top/2017/04/15/hello-world/</id>
-    <published>2017-04-15T13:01:29.167Z</published>
-    <updated>2017-04-15T13:01:29.167Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      总结一下搭建个人博客所遇到的问题。
     
     </summary>
     
+      <category term="other" scheme="https://teleporter.top/categories/other/"/>
+    
+    
+      <category term="hexo" scheme="https://teleporter.top/tags/hexo/"/>
+    
+      <category term="github" scheme="https://teleporter.top/tags/github/"/>
+    
+      <category term="阿里云" scheme="https://teleporter.top/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
     
   </entry>
   
