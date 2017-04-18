@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://teleporter.top/"/>
-  <updated>2017-04-18T00:43:00.745Z</updated>
+  <updated>2017-04-18T01:15:22.296Z</updated>
   <id>https://teleporter.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://teleporter.top/2017/04/16/%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://teleporter.top/2017/04/16/使用Hexo-Github搭建个人博客/</id>
     <published>2017-04-16T13:41:59.000Z</published>
-    <updated>2017-04-18T00:43:00.745Z</updated>
+    <updated>2017-04-18T01:15:22.296Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;&emsp;Hexo是一个简单、快速、强大的基于 Github Pages的博客发布工具，支持Markdown格式，有众多优秀插件和主题。<br><a id="more"></a></p>
 <h3 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h3><ul>
@@ -43,9 +43,9 @@
                 <div class="image-caption"></div>
             </figure></p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li><a href="http://wensibo.top/categories/一口一口吃掉Hexo/" target="_blank" rel="external"><font size="2" color="#FF4081">Hexo+Github搭建教程</font></a></li>
-<li><a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="external"><font size="2" color="#FF4081">Indigo主题配置</font></a></li>
-<li><a href="http://www.appinn.com/markdown/#philosophy" target="_blank" rel="external"><font size="2" color="#FF4081">markdown官方文档</font></a></li>
+<li><a href="http://wensibo.top/categories/一口一口吃掉Hexo/" target="_blank" rel="external"><em><font size="2" color="#FF4081">Hexo+Github搭建教程</font></em></a></li>
+<li><a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="external"><em><font size="2" color="#FF4081">Indigo主题配置</font></em></a></li>
+<li><a href="http://www.appinn.com/markdown/#philosophy" target="_blank" rel="external"><em><font size="2" color="#FF4081">markdown官方文档</font></em></a></li>
 </ul>
 ]]></content>
     
