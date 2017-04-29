@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://teleporter.top/"/>
-  <updated>2017-04-18T01:15:22.296Z</updated>
+  <updated>2017-04-25T14:13:18.914Z</updated>
   <id>https://teleporter.top/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AS设置及问题汇总（不定期更新）</title>
+    <link href="https://teleporter.top/2017/04/25/AS%E8%AE%BE%E7%BD%AE%E5%8F%8A%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
+    <id>https://teleporter.top/2017/04/25/AS设置及问题汇总（不定期更新）/</id>
+    <published>2017-04-25T13:41:37.000Z</published>
+    <updated>2017-04-25T14:13:18.914Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;Android Studio的软件设置及问题汇总，长期更新。<br><a id="more"></a></p>
+<h2 id="软件设置"><a href="#软件设置" class="headerlink" title="软件设置"></a>软件设置</h2><h3 id="初始设置，界面与字体。"><a href="#初始设置，界面与字体。" class="headerlink" title="初始设置，界面与字体。"></a>初始设置，界面与字体。</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/AS_style.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/AS_foot.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="设置自动导包"><a href="#设置自动导包" class="headerlink" title="设置自动导包"></a>设置自动导包</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/AS自动导包.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;Android Studio的软件设置及问题汇总，长期更新。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Software" scheme="https://teleporter.top/categories/Software/"/>
+    
+    
+      <category term="AS" scheme="https://teleporter.top/tags/AS/"/>
+    
+      <category term="Settings" scheme="https://teleporter.top/tags/Settings/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Hexo+Github搭建个人博客</title>
