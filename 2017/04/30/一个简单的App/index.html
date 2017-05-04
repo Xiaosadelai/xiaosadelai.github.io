@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>一个简单的App | Teleporter | 如果没能一次成功，那就叫它1.0版吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="AS,Okhttp,Notes">
+    <meta name="description" content="&amp;emsp;&amp;emsp;主页搭建完成后，我们将实现移动端的Note。总的来说，web端搭建成功后。这个note还是比较简单的。">
+<meta name="keywords" content="AS,Okhttp,Notes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个简单的App">
+<meta property="og:url" content="https://teleporter.top/2017/04/30/一个简单的App/index.html">
+<meta property="og:site_name" content="Teleporter">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;主页搭建完成后，我们将实现移动端的Note。总的来说，web端搭建成功后。这个note还是比较简单的。">
+<meta property="og:updated_time" content="2017-05-04T04:51:13.787Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一个简单的App">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;主页搭建完成后，我们将实现移动端的Note。总的来说，web端搭建成功后。这个note还是比较简单的。">
+    
+        <link rel="alternate" type="application/atom+xml" title="Teleporter" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.1">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/关羽.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">潇洒的来</h5>
+          <a href="mailto:pansaian@163.com" title="pansaian@163.com" class="mail">pansaian@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                档案
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/xiaosadelai" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/_blank" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">一个简单的App</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">一个简单的App</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-30T12:40:10.000Z" itemprop="datePublished" class="page-time">
+  2017-04-30
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Android/">Android</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Github托管代码"><span class="post-toc-number">1.</span> <span class="post-toc-text">Github托管代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编写过程"><span class="post-toc-number">2.</span> <span class="post-toc-text">编写过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Gradle文件"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Gradle文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HttpUtil工具类"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">HttpUtil工具类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Notes实体类"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Notes实体类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编写NotesAdapter"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">编写NotesAdapter</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MainActivity布局"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">MainActivity布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MainActivity业务逻辑"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">MainActivity业务逻辑</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NotesActivity的业务逻辑"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">NotesActivity的业务逻辑</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#问题备忘"><span class="post-toc-number">3.</span> <span class="post-toc-text">问题备忘</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Adapter中button事件更新主UI问题"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Adapter中button事件更新主UI问题</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-一个简单的App"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">一个简单的App</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-04-30 20:40:10" datetime="2017-04-30T12:40:10.000Z"  itemprop="datePublished">2017-04-30</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Android/">Android</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>&emsp;&emsp;主页搭建完成后，我们将实现移动端的Note。总的来说，web端搭建成功后。这个note还是比较简单的。<br><a id="more"></a></p>
+<h2 id="Github托管代码"><a href="#Github托管代码" class="headerlink" title="Github托管代码"></a>Github托管代码</h2><p>&emsp;&emsp;项目所在的<a href="https://github.com/Xiaosadelai/WebAssistant" target="_blank" rel="external">Github地址</a></p>
+<h2 id="编写过程"><a href="#编写过程" class="headerlink" title="编写过程"></a>编写过程</h2><h3 id="Gradle文件"><a href="#Gradle文件" class="headerlink" title="Gradle文件"></a>Gradle文件</h3><p>&emsp;&emsp;在gradle中添加用到的第三方库,这里主要使用了Gson,Okhttp,recyclerview<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.android.support:appcompat-v7:25.3.1&apos;</div><div class="line">    compile &apos;com.android.support.constraint:constraint-layout:1.0.2&apos;</div><div class="line">    compile &apos;com.squareup.okhttp3:okhttp:3.4.1&apos;</div><div class="line">    compile &apos;com.google.code.gson:gson:2.7&apos;</div><div class="line">    compile &apos;com.android.support:recyclerview-v7:24.2.1&apos;</div><div class="line">    compile &apos;com.android.support:design:24.2.0&apos;</div></pre></td></tr></table></figure></p>
+<h3 id="HttpUtil工具类"><a href="#HttpUtil工具类" class="headerlink" title="HttpUtil工具类"></a>HttpUtil工具类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class HttpUtil &#123;</div><div class="line">    public static void sendOkHttpRequest(String address, okhttp3.Callback callback)&#123;</div><div class="line">        OkHttpClient client=new OkHttpClient();</div><div class="line">        Request request=new Request.Builder()</div><div class="line">                .url(address)</div><div class="line">                .build();</div><div class="line">        client.newCall(request).enqueue(callback);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Notes实体类"><a href="#Notes实体类" class="headerlink" title="Notes实体类"></a>Notes实体类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">public class Notes &#123;</div><div class="line">        private int id;</div><div class="line">        private String content;</div><div class="line">        private String time;</div><div class="line">        private int status;</div><div class="line">        public int getId() &#123;</div><div class="line">            return id;</div><div class="line">        &#125;</div><div class="line">        public void setId(int id) &#123;</div><div class="line">            this.id = id;</div><div class="line">        &#125;</div><div class="line">        public String getContent() &#123;</div><div class="line">            return content;</div><div class="line">        &#125;</div><div class="line">        public void setContent(String content) &#123;</div><div class="line">            this.content = content;</div><div class="line">        &#125;</div><div class="line">        public String  getTime() &#123;</div><div class="line">            return time;</div><div class="line">        &#125;</div><div class="line">        public void setTime(String  time) &#123;</div><div class="line">            this.time = time;</div><div class="line">        &#125;</div><div class="line">        public int getStatus() &#123;</div><div class="line">            return status;</div><div class="line">        &#125;</div><div class="line">        public void setStatus(int status) &#123;</div><div class="line">            this.status = status;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="编写NotesAdapter"><a href="#编写NotesAdapter" class="headerlink" title="编写NotesAdapter"></a>编写NotesAdapter</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">public class NotesAdapter extends RecyclerView.Adapter&lt;NotesAdapter.ViewHolder&gt;&#123;</div><div class="line">    final Handler handler;</div><div class="line"></div><div class="line">    public List&lt;Notes&gt; notesList;</div><div class="line"></div><div class="line">    class ViewHolder extends RecyclerView.ViewHolder&#123;</div><div class="line">        TextView numberText,contentText,timeText;</div><div class="line">        Button button;</div><div class="line">        public ViewHolder(View itemView) &#123;</div><div class="line">            super(itemView);</div><div class="line">            numberText= (TextView) itemView.findViewById(R.id.number);</div><div class="line">            contentText= (TextView) itemView.findViewById(R.id.content);</div><div class="line">            timeText= (TextView) itemView.findViewById(R.id.time);</div><div class="line">            button= (Button) itemView.findViewById(R.id.button);</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    //用到主线程的handler,需要在Adapter构造时候传入handler参数</div><div class="line">    public NotesAdapter(Handler handler, List&lt;Notes&gt; mnotesList)&#123;</div><div class="line">        this.handler = handler;</div><div class="line">        notesList=mnotesList;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) &#123;</div><div class="line">        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.note_item,parent,false);</div><div class="line">        ViewHolder holder=new ViewHolder(view);</div><div class="line">        return holder;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onBindViewHolder(final ViewHolder holder, final int position) &#123;</div><div class="line">        Notes notes=notesList.get(position);</div><div class="line">        holder.numberText.setText(String.valueOf(position+1));</div><div class="line">        holder.contentText.setText(notes.getContent());</div><div class="line">        holder.timeText.setText(notes.getTime());</div><div class="line">        holder.button.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">            @Override</div><div class="line">            public void onClick(final View v) &#123;</div><div class="line">                final int id=notesList.get(position).getId();</div><div class="line"></div><div class="line">                String url= Constant.HTTP_DELETE+id;</div><div class="line">                HttpUtil.sendOkHttpRequest(url, new Callback() &#123;</div><div class="line">                    @Override</div><div class="line">                    public void onFailure(Call call, IOException e) &#123;</div><div class="line">                        Message msg=new Message();</div><div class="line">                        msg.what=0x88;</div><div class="line">                        handler.sendMessage(msg);</div><div class="line">                    &#125;</div><div class="line">                    @Override</div><div class="line">                    public void onResponse(Call call, Response response) throws IOException &#123;</div><div class="line">                        Message msg=new Message();</div><div class="line">                        msg.what=0x89;</div><div class="line">                        handler.sendMessage(msg);</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public int getItemCount() &#123;</div><div class="line">        return notesList.size();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="MainActivity布局"><a href="#MainActivity布局" class="headerlink" title="MainActivity布局"></a>MainActivity布局</h3><p>&emsp;&emsp;这里用FrameLayout布局，添加fab</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;</div><div class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</div><div class="line">    android:layout_width=&quot;match_parent&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;</div><div class="line">    tools:context=&quot;com.pansaian.webassistant.MainActivity&quot;&gt;</div><div class="line">    &lt;android.support.v7.widget.Toolbar</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;?attr/actionBarSize&quot;</div><div class="line">        android:theme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;</div><div class="line">        app:popupTheme=&quot;@style/AlertDialog.AppCompat.Light&quot;</div><div class="line">        android:background=&quot;?attr/colorPrimary&quot;</div><div class="line">        android:id=&quot;@+id/toolbar&quot;&gt;</div><div class="line">    &lt;/android.support.v7.widget.Toolbar&gt;</div><div class="line">    &lt;android.support.v7.widget.RecyclerView</div><div class="line">        android:paddingTop=&quot;?attr/actionBarSize&quot;</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:id=&quot;@+id/recycler_view&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;&gt;</div><div class="line">    &lt;/android.support.v7.widget.RecyclerView&gt;</div><div class="line">&lt;android.support.design.widget.FloatingActionButton</div><div class="line">        android:id=&quot;@+id/button_add_note&quot;</div><div class="line">        android:layout_width=&quot;wrap_content&quot;</div><div class="line">        android:layout_height=&quot;wrap_content&quot;</div><div class="line">        android:layout_gravity=&quot;bottom|right&quot;</div><div class="line">        android:layout_marginBottom=&quot;30dp&quot;</div><div class="line">        android:layout_marginRight=&quot;60dp&quot;</div><div class="line">        android:src=&quot;@drawable/ic_action_new&quot;</div><div class="line">        android:elevation=&quot;10dp&quot;</div><div class="line">        app:fabSize=&quot;normal&quot;</div><div class="line">        app:pressedTranslationZ=&quot;8dp&quot;</div><div class="line">        app:rippleColor=&quot;#ff87eb&quot; /&gt;</div><div class="line">&lt;/FrameLayout&gt;</div></pre></td></tr></table></figure>
+<h3 id="MainActivity业务逻辑"><a href="#MainActivity业务逻辑" class="headerlink" title="MainActivity业务逻辑"></a>MainActivity业务逻辑</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div></pre></td><td class="code"><pre><div class="line">public class MainActivity extends AppCompatActivity &#123;</div><div class="line">    private static final String TAG =&quot;MainActivity&quot; ;</div><div class="line">    public  TextView text;</div><div class="line">    FloatingActionButton fab;</div><div class="line">    public RecyclerView recyclerView;</div><div class="line">    //handler 处理Message并更新主UI</div><div class="line">    private   Handler handler=new Handler()&#123;</div><div class="line">        public void handleMessage(Message msg)&#123;</div><div class="line">            switch(msg.what)&#123;</div><div class="line">                case 0x123:</div><div class="line">                    String data=msg.getData().getString(&quot;data&quot;);</div><div class="line">                    List&lt;Notes&gt; notesList=parseJsonData(data);</div><div class="line">                    NotesAdapter adapter=new NotesAdapter(handler, notesList);</div><div class="line">                    recyclerView.setAdapter(adapter);</div><div class="line">                    break;</div><div class="line">                case 0x122:</div><div class="line">                    Toast.makeText(MainActivity.this, &quot;网络出差了，稍后再试！&quot;, Toast.LENGTH_SHORT).show();</div><div class="line">                    break;</div><div class="line">                case 0x89:</div><div class="line">                    Toast.makeText(MainActivity.this, &quot;删除成功！&quot;, Toast.LENGTH_SHORT).show();</div><div class="line">                    initData();</div><div class="line">                    break;</div><div class="line">                case 0x88:</div><div class="line">                    Toast.makeText(MainActivity.this, &quot;删除失败！&quot;, Toast.LENGTH_SHORT).show();</div><div class="line">                    initData();</div><div class="line">                    break;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        initToolbar();</div><div class="line">        text= (TextView) findViewById(R.id.text);</div><div class="line">        recyclerView= (RecyclerView) findViewById(R.id.recycler_view);</div><div class="line">        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);</div><div class="line">        recyclerView.setLayoutManager(linearLayoutManager);</div><div class="line">        fab= (FloatingActionButton) findViewById(R.id.button_add_note);</div><div class="line">        fab.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">            @Override</div><div class="line">            public void onClick(View v) &#123;</div><div class="line">                Intent intent=new Intent(MainActivity.this,NoteActivity.class);</div><div class="line">                startActivityForResult(intent,1);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">        initData();</div><div class="line">    &#125;</div><div class="line">    //新建note后，从noteActivity中获得结果并处理</div><div class="line">    @Override</div><div class="line">    protected void onActivityResult(int requestCode, int resultCode, Intent data) &#123;</div><div class="line">        if(requestCode==1)&#123;</div><div class="line">            initData();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    @Override</div><div class="line">    public boolean onCreateOptionsMenu(Menu menu) &#123;</div><div class="line">        getMenuInflater().inflate(R.menu.toolbar,menu);</div><div class="line">        return super.onCreateOptionsMenu(menu);</div><div class="line">    &#125;</div><div class="line">    //刷新按钮</div><div class="line">    @Override</div><div class="line">    public boolean onOptionsItemSelected(MenuItem item) &#123;</div><div class="line">        switch (item.getItemId())&#123;</div><div class="line">            case R.id.fresh_a:</div><div class="line">                initData();</div><div class="line">                break;</div><div class="line">            default:</div><div class="line">        &#125;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">    //从服务器获得数据</div><div class="line">    private void initData() &#123;</div><div class="line">        HttpUtil.sendOkHttpRequest(Constant.HTTP_JSON, new okhttp3.Callback() &#123;</div><div class="line">            @Override</div><div class="line">            public void onFailure(Call call, IOException e) &#123;</div><div class="line">                Message message=new Message();</div><div class="line">                message.what=0x122;</div><div class="line">                handler.sendMessage(message);</div><div class="line">            &#125;</div><div class="line">            @Override</div><div class="line">            public void onResponse(Call call, Response response) throws IOException &#123;</div><div class="line">                String responseData=response.body().string();</div><div class="line">                Bundle bundle=new Bundle();</div><div class="line">                bundle.putString(&quot;data&quot;,responseData);</div><div class="line">                Message message= new Message();</div><div class="line">                message.what=0x123;</div><div class="line">                message.setData(bundle);</div><div class="line">                handler.sendMessage(message);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">    //将JSON数据转换成List集合</div><div class="line">    private List&lt;Notes&gt; parseJsonData(String responseData) &#123;</div><div class="line">        Gson gson=new Gson();</div><div class="line">        List&lt;Notes&gt; notesList=gson.fromJson(responseData,new TypeToken&lt;List&lt;Notes&gt;&gt;()&#123;&#125;.getType());</div><div class="line">        return  notesList;</div><div class="line">    &#125;</div><div class="line">    //初始化toolbar</div><div class="line">    private void initToolbar() &#123;</div><div class="line">        Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);</div><div class="line">        setSupportActionBar(toolbar);</div><div class="line">        setTitle(&quot;Notes&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="NotesActivity的业务逻辑"><a href="#NotesActivity的业务逻辑" class="headerlink" title="NotesActivity的业务逻辑"></a>NotesActivity的业务逻辑</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line">public class NoteActivity extends AppCompatActivity&#123;</div><div class="line"></div><div class="line">    private Handler handler=new Handler()&#123;</div><div class="line">      public void handleMessage(Message msg)&#123;</div><div class="line">          switch (msg.what)&#123;</div><div class="line">              case 0x222:</div><div class="line">                  Toast.makeText(NoteActivity.this, &quot;添加成功！！&quot;, Toast.LENGTH_SHORT).show();</div><div class="line">                  Intent intent =new Intent();</div><div class="line">                  setResult(1,intent);</div><div class="line">                  finish();</div><div class="line">                  break;</div><div class="line">              case 0x221:</div><div class="line">                  Toast.makeText(NoteActivity.this, &quot;网络出错了&quot;, Toast.LENGTH_SHORT).show();</div><div class="line">                  break;</div><div class="line">          &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;;</div><div class="line">    private Toolbar mToolbar;</div><div class="line">    private EditText mEtNoteContent;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.note);</div><div class="line">        mEtNoteContent = (EditText) findViewById(R.id.et_note_content);</div><div class="line">        initToolbar();</div><div class="line">    &#125;</div><div class="line">    @Override</div><div class="line">    public boolean onCreateOptionsMenu(Menu menu) &#123;</div><div class="line">        getMenuInflater().inflate(R.menu.menu_main, menu);</div><div class="line">        return super.onCreateOptionsMenu(menu);</div><div class="line">    &#125;</div><div class="line">    /**</div><div class="line">     * 初始化toolbar</div><div class="line">     */</div><div class="line">    private void initToolbar() &#123;</div><div class="line">        mToolbar = (Toolbar) findViewById(R.id.toolbar_note_content);</div><div class="line">        setSupportActionBar(mToolbar);</div><div class="line">        getSupportActionBar().setDisplayHomeAsUpEnabled(true);</div><div class="line">        mToolbar.setNavigationOnClickListener(new View.OnClickListener() &#123;</div><div class="line">            @Override</div><div class="line">            public void onClick(View v) &#123;</div><div class="line">                finish();</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">    @Override</div><div class="line">    public boolean onOptionsItemSelected(MenuItem item) &#123;</div><div class="line">        switch (item.getItemId()) &#123;</div><div class="line">            case R.id.save:</div><div class="line">                String content=mEtNoteContent.getText().toString();</div><div class="line">                if (TextUtils.isEmpty(content))&#123;</div><div class="line">                    Toast.makeText(NoteActivity.this, &quot;无数据输入！&quot;, Toast.LENGTH_SHORT).show();</div><div class="line">                    break;</div><div class="line">                &#125;else&#123;</div><div class="line">                    String url= Constant.HTTP_ADDNOTES+content;</div><div class="line">                    HttpUtil.sendOkHttpRequest(url, new okhttp3.Callback() &#123;</div><div class="line">                        @Override</div><div class="line">                        public void onFailure(Call call, IOException e) &#123;</div><div class="line">                            Message msg=new Message();</div><div class="line">                            msg.what=0x221;</div><div class="line">                            handler.sendMessage(msg);</div><div class="line">                        &#125;</div><div class="line">                        @Override</div><div class="line">                        public void onResponse(Call call, Response response) throws IOException &#123;</div><div class="line">                            Message msg=new Message();</div><div class="line">                            msg.what=0x222;</div><div class="line">                            handler.sendMessage(msg);</div><div class="line">                        &#125;</div><div class="line">                    &#125;);</div><div class="line">                &#125;</div><div class="line">            default:</div><div class="line">                break;</div><div class="line">                &#125;</div><div class="line">        return  super.onOptionsItemSelected(item);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="问题备忘"><a href="#问题备忘" class="headerlink" title="问题备忘"></a>问题备忘</h2><h3 id="Adapter中button事件更新主UI问题"><a href="#Adapter中button事件更新主UI问题" class="headerlink" title="Adapter中button事件更新主UI问题"></a>Adapter中button事件更新主UI问题</h3><p>&emsp;&emsp;在NotesAdapter中，每一个Holder里面拥有一个删除按钮，触发后删除该note并且通知主UI更新界面，所以在Adapter的构造函数中，传入主线程的handler，可以解决问题。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-05-04T04:51:13.787Z" itemprop="dateUpdated">2017-05-04 12:51:13</time>
+</span><br>
+
+
+        转载请注明出处：<a href="/2017/04/30/一个简单的App/" target="_blank" rel="external">https://teleporter.top/2017/04/30/一个简单的App/</a>
+    </div>
+    <footer>
+        <a href="https://teleporter.top">
+            <img src="/img/关羽.jpg" alt="潇洒的来">
+            潇洒的来
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AS/">AS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/">Notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Okhttp/">Okhttp</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://teleporter.top/2017/04/30/一个简单的App/&title=《一个简单的App》 — Teleporter&pic=https://teleporter.top/img/关羽.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://teleporter.top/2017/04/30/一个简单的App/&title=《一个简单的App》 — Teleporter&source=&emsp;&emsp;主页搭建完成后，我们将实现移动端的Note。总的来说，web端搭建成功后。这个note还是比较简单的。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://teleporter.top/2017/04/30/一个简单的App/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《一个简单的App》 — Teleporter&url=https://teleporter.top/2017/04/30/一个简单的App/&via=https://teleporter.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://teleporter.top/2017/04/30/一个简单的App/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/27/从零开始搭建个人主页/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">从零开始搭建个人主页</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+  
+
+<div id="SOHUCS" sid="一个简单的App" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cysWYKNI5'; 
+var conf = '8124db9071b792a4ca59ff61f5244e7a'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); 
+</script>
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢打赏~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wchat.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>潇洒的来 &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://teleporter.top/2017/04/30/一个简单的App/&title=《一个简单的App》 — Teleporter&pic=https://teleporter.top/img/关羽.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://teleporter.top/2017/04/30/一个简单的App/&title=《一个简单的App》 — Teleporter&source=&emsp;&emsp;主页搭建完成后，我们将实现移动端的Note。总的来说，web端搭建成功后。这个note还是比较简单的。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://teleporter.top/2017/04/30/一个简单的App/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《一个简单的App》 — Teleporter&url=https://teleporter.top/2017/04/30/一个简单的App/&via=https://teleporter.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://teleporter.top/2017/04/30/一个简单的App/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACM0lEQVR42u3aQY4CMQwFUe5/6Uaa1SwIKX8DUjuVFYLQ5LGwHNuPB17X3+J7rn9r9YTVHvJb4ZIhQ8ZtGdfbtTri6rvZ+wT2/rsyZMg4gdEJoKsD8Z3k79ucWYYMGTLwo0mq1/mDZMiQIYP8WDVNrF6DZciQIaNzic0KZP208sN3cRkyZNyQUW0M/PL1F/sbMmTIuAnjKi5eJuunfYVTyZAhYzSDJGdZi7EaXrNPN/daGTJkjGDwIj5P1zpXTV6qW4ZaGTJkHMPIWo/V4hoP65tPZciQcQCjmt5VE8fs0IU/QoYMGQcwqqX5LMh2rrib1FOGDBmjGXxrVvTnoxtV9uYqK0OGjKEMUhrL2pAkZH/g+TJkyBjK4EGNI/nYROdiLEOGjNMYJBRmA1t8yKw19iFDhowDGKQZycNitcTP9xdamDJkyBjEqBb6OZuMaGTNTjQ5IkOGjEGMamGLHJSsagK6KcbJkCFjNKPVMgQBMXt+tRgnQ4aMExg8OGZtA74nSxNlyJAxm9EZ/yLhmLcH+MV4WWiTIUPGaAaHdQpwPOEjANSJlSFDxghGp5XIv8tDditVlSFDxlBGNshFGpzZ9TUc3ZAhQ8Zoxveajp2CPk8HZciQcQ6DB9lqkpcliGH6KEOGjAMYJPBVS2z8mdk5XwRcGTJkHM/o7M9anq1GpgwZMg5m8HeyIMtHLloBV4YMGTdkZGNb2RM6LcxNwJUhQ8ZQRjbikDU+ybhGZxBNhgwZ4xhPsiqJhzw8wCwAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.1"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.1" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '>>d(* _ *)b<<';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '你还追啊，我到家了！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
